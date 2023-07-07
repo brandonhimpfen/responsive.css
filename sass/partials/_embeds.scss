@@ -1,0 +1,33 @@
+// Responsive Embeds
+// <iframe>, <embed>, <video> and <object>
+// --------------------------------------------------
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  @include size(100%, 100%);
+  border: 0;
+}
+
+/* Aspect ratio 16:9 */
+.embed-responsive-ratio-16to9 {
+  @include padding(null, null, 56.25%, null);
+}
+
+/* Aspect ratio 4:3 */
+.embed-responsive-ratio-4to3 {
+  @include padding(null, null, 75%, null);
+}
